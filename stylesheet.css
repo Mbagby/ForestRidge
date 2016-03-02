@@ -1,15 +1,22 @@
-body{
-	font-family: 
+/*
+@font-face {
+font-family: "Solomon";
+src: url("Fonts/Solomon - black.ttf") format("opentype");
 }
 
 @font-face {
-    font-family: myFirstFont;
-    src: url(sansation_light.woff);
+font-family: "Solomon";
+font-weight: bold;
+src: url("Fonts/Solomon - bold.ttf") format("opentype");
+}*/
+
+body{
+	font-family: 'Geneva' !important;
 }
 
 
 /*Mobile IPhone*/
-@media screen and (max-width: 449px){
+@media screen and (max-width: 599px){
 
 
 /*NavBar*/
@@ -24,7 +31,7 @@ nav ul li:hover {
     color: green;
 }
 nav{
-	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-family: 'Geneva', sans-serif;
 	background-image: url("Images/balconies_green.jpg");
 	text-align: center;
 	padding-top: 1%;
@@ -70,12 +77,24 @@ nav li img{
 	width: 35px;
 }
 }
+/*Hover*/
+.square img{
+  -webkit-transition: all 1s ease;
+   -moz-transition: all 1s ease;
+   -o-transition: all 1s ease;
+   -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+ 
+.square img:hover {
+  border: 5px solid #000;
+  border-radius: 50%;
+}
 
 
 
 
-
-@media screen and (min-width: 450px) and (max-width: 925px){
+@media screen and (min-width: 600px) and (max-width: 925px){
 /*Three Sqaures*/
 
 
@@ -144,11 +163,8 @@ nav li img{
 	border-radius: 5%;
 }
 
-
-
-
-
-/*.square img{
+/*Hover*/
+.square img{
   -webkit-transition: all 1s ease;
    -moz-transition: all 1s ease;
    -o-transition: all 1s ease;
@@ -159,7 +175,7 @@ nav li img{
 .square img:hover {
   border: 10px solid #000;
   border-radius: 50%;
-}*/
+}
 .square p{
 	font-size: 16px;
 }
@@ -226,6 +242,8 @@ p{
 }
 
 /*Contact Form*/
+
+
 #titleContact{
 	text-align: center;
 	margin-top: 2%;
@@ -281,8 +299,8 @@ p{
   	bottom:0;
    	width:100%;
 	background-color: #BDC8D6;
-	padding-top: 2%;
-	padding-bottom: 4%;
+	padding-top: 1%;
+	padding-bottom: 2%;
 }
 #footer div{
 	text-align: center;
@@ -293,7 +311,7 @@ p{
 	font-weight: bold;
 }
 #footer ul{
-	padding-top: 7px;
+	padding-top: 2px;
 	list-style-type: none;
 	padding-left: 0;
 }
@@ -499,6 +517,20 @@ p{
 
 #tables img{
 	width: 100%;
+}
+
+/*Hover*/
+.square img{
+  -webkit-transition: all 1s ease;
+   -moz-transition: all 1s ease;
+   -o-transition: all 1s ease;
+   -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+ 
+.square img:hover {
+  border: 15px solid #000;
+  border-radius: 50%;
 }
 /*Footer*/
 
