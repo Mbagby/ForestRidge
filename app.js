@@ -9,8 +9,6 @@ $(document).ready(function(){
     maxSlides: 3,
     slideMargin: 10
   });
-$('#square1').hover
-  $("#card").flip();
+  $(".bx-controls-direction")[1].hide();
 
-  
 });
