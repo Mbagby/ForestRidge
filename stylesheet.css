@@ -33,6 +33,18 @@ nav ul li{
 nav ul li:hover {
     color: green;
 }
+nav ul li a{
+	color: white;
+	text-decoration: none;
+    -webkit-transition: color 1s;
+    -moz-transition:    color 1s;
+    -ms-transition:     color 1s;
+    -o-transition:      color 1s;
+    transition:         color 1s;
+}
+nav ul li a:hover {
+    color: green;
+}
 nav{
 	background-image: url("Images/balconies_green.jpg");
 	text-align: center;
@@ -300,6 +312,18 @@ nav ul li{
     transition:         color 1s;
 }
 nav ul li:hover {
+    color: green;
+}
+nav ul li a{
+		color: white;
+	text-decoration: none;
+    -webkit-transition: color 1s;
+    -moz-transition:    color 1s;
+    -ms-transition:     color 1s;
+    -o-transition:      color 1s;
+    transition:         color 1s;
+}
+nav ul li a:hover {
     color: green;
 }
 nav{
@@ -579,6 +603,18 @@ nav ul li{
     transition:         color 1s;
 }
 nav ul li:hover {
+    color: green;
+}
+nav ul li a{
+	color: white;
+	text-decoration: none;
+    -webkit-transition: color 1s;
+    -moz-transition:    color 1s;
+    -ms-transition:     color 1s;
+    -o-transition:      color 1s;
+    transition:         color 1s;
+}
+nav ul li a:hover {
     color: green;
 }
 nav{

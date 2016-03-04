@@ -233,18 +233,3 @@ $(document).ready(function(){
 
 });
 
-
-// var applicationFee= 40
-
-
-// var oneBedroomSecurity = 850
-// var twoBedroomSecurity = 1000
-
-
-// var oneTimeExpenses= function(){
-//   var oneTimeExpenses = 0;
-//    oneTimeExpenses += applicationFee
-//    if()
-// }
-
-// var monthlyExpenses =
