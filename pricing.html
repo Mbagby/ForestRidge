@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Minix Web Page</title>
-	<!-- Add My Stylesheet -->
-	<link rel="stylesheet" href="stylesheet.css">
-	<!-- Add Boostrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<!-- Add Semantic -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+  <title>Minix Web Page</title>
+  <!-- Add My Stylesheet -->
+  <link rel="stylesheet" href="stylesheet.css">
+  <!-- Add Boostrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- Add Semantic -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
    
 
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
 
-	<!-- Slider-->
-	<script src="jquery.bxslider.js"></script>
-  	<link href="jquery.bxslider.css" rel="stylesheet" />
+  <!-- Slider-->
+  <script src="jquery.bxslider.js"></script>
+    <link href="jquery.bxslider.css" rel="stylesheet" />
 
 
-  		<!-- Add Javascript -->
-  	<script type="text/javascript" src="app.js"></script>
-  	 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+      <!-- Add Javascript -->
+    <script type="text/javascript" src="app.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
 
 </head>
-<!-- Add JS App -->
-	<script type="text/javascript" src="app.js"></script>
 <body>
 
+	
+	<!-- Add JS App -->
+	<script type="text/javascript" src="app.js"></script>
 	
 <!-- Top Nav Bar -->
 	<nav>
@@ -43,8 +44,7 @@
    			</ul>
 	</nav>
 
-<!-- Location Modal -->
-
+<!-- Location Modal --> 
 <div class="ui modal">
   <i class="close icon"></i>
   <div class="header">
@@ -52,8 +52,7 @@
   </div>
   <div class="image content">
     <div class="description">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11732.919449706047!2d-83.13875!3d42.677673!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4280460df8c36b6!2sForest+Ridge+Apartments!5e0!3m2!1sen!2sus!4v1456794037148" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen id="googleMapModal"></iframe>
-      
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11732.919449706047!2d-83.13875!3d42.677673!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4280460df8c36b6!2sForest+Ridge+Apartments!5e0!3m2!1sen!2sus!4v1456794037148" width="100%" frameborder="0" style="border:0" allowfullscreen id="googleMapModal"></iframe>
     </div>
   </div>
   <div class="actions">
@@ -67,32 +66,74 @@
 </div>
 
 
-<!-- About Us Text -->
+<!-- Contact Form -->
 
 <div class="ui divider"></div>
 	<div class="ui divider"></div>
 
-
-
-	<div id="tables">
-		<h2 id= "titleApartments">Availability & Pricing</h2>
-			<div class="ui divider"></div>
-<div class="ui divider"></div>
-		<img src="Images/availability.png" alt="availability">
-		<img src="Images/other_exp.png" alt="expense">
-		<img src="Images/policy_1.png" alt="policy1">
-		<img src="Images/policy_2.png" alt="policy2">
-		
-
+	<div id= "titlePricing">
+		<h2>Pricing</h2>
+    <p>Get a pricing estimate below! Have a pet? Looking to plan your finances? What would your immediate, first month, and monthly payments be? 
 	</div>
 
-<!-- About Us Jumbotron -->
-
-<div class="ui divider"></div>
-<div class="ui divider"></div>
+	<div class="ui divider"></div>
+	<div class="ui divider"></div>
 
 
+<div id="pricing">
+  <div class="ui form" id="pricingForm">
 
+
+
+         <div class="field">
+           <label>Apartment Size</label>
+           <select class="ui fluid dropdown">
+             <option value="">One Bedroom</option>
+             <option value="AL">Two Bedroom</option>
+           </select>
+         </div>
+
+        <div class="ui checkbox" >
+            <input type="checkbox" id="petCheckbox" name="pets"class="hidden" value= "false">
+            <label>Will you be bringing a cat or dog?</label>
+        </div>
+
+        </br>
+
+        <div class= "ui checkbox" id="dogCheckbox">
+            <input type="checkbox" name="dogs" class="hidden" value= "false">
+            <label>Dog</label>
+        </div>
+
+</br>
+
+        <div class= "ui checkbox" id="catCheckbox">
+            <input type="checkbox" name="cats"class="hidden" value= "false">
+            <label>Cat</label>
+        </div>
+
+
+        <div class = "field" id="dogDropdown">
+            <label>How many dogs?</label>
+            <select class="ui fluid dropdown">
+                 <option value="1">One</option>
+                 <option value="2">Two</option>
+                 <option value="3">Three</option>
+           </select>
+        </div>
+
+         <div class = "field" id="catDropdown">
+            <label>How many cats?</label>
+            <select class="ui fluid dropdown">
+                 <option value="1">One</option>
+                 <option value="2">Two</option>
+                 <option value="3">Three</option>
+           </select>
+        </div>
+
+
+  </div>
+</div>
 
 
 

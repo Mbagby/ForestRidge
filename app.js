@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	$('#locationModal').click(function(){
   	$('.ui.modal')
   		.modal('show');
@@ -9,7 +10,39 @@ $(document).ready(function(){
     maxSlides: 3,
     slideMargin: 10
   });
+  $('.ui.checkbox').checkbox();
+  //change value of pet checkbox when checked
+  $('#petCheckbox').change(function(){
+     pcb = $(this);
+     pcb.val(pcb.prop('checked'));
+ });
+  $('#dogCheckbox').change(function(){
+     pcb = $(this);
+     pcb.val(pcb.prop('checked'));
+ });
+  $('#catCheckbox').change(function(){
+     pcb = $(this);
+     pcb.val(pcb.prop('checked'));
+ });
+  //initially hide animal choices
+  $('#dogCheckbox').hide();
+  $('#catCheckbox').hide();
+  //
+  $('#petCheckbox').change(function(){
+    if (document.getElementById("petCheckbox").value == "true"){
+      console.log(true)
+        $('#dogCheckbox').show();
+        $('#catCheckbox').show();
+    }else if (document.getElementById("petCheckbox").value == "false"){
+      console.log(false)
+      $('#dogCheckbox').hide();
+      $('#catCheckbox').hide();
+    }
+  });
+
+
   $(".bx-controls-direction")[1].hide();
+
 
 });
 

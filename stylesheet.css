@@ -15,82 +15,6 @@ body{
 }
 
 
-/*Mobile IPhone*/
-@media screen and (max-width: 599px){
-
-
-/*NavBar*/
-nav ul li{
-    -webkit-transition: color 1s;
-    -moz-transition:    color 1s;
-    -ms-transition:     color 1s;
-    -o-transition:      color 1s;
-    transition:         color 1s;
-}
-nav ul li:hover {
-    color: green;
-}
-nav{
-	font-family: 'Geneva', sans-serif;
-	background-image: url("Images/balconies_green.jpg");
-	text-align: center;
-	padding-top: 1%;
-	padding-bottom: 1%;
-}
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-nav li {
-    display: inline;
-    padding: 1%;
-    font-size: 8px;
-}
-nav li img{
-	width: 13%;
-	margin: 1%;
-	margin-left: 10%;
-	margin-right: 10%;
-}
-
-/*Footer*/
-#footer{
-	background-color: #F0F8FF;
-	padding-top: 2%;
-	padding-bottom: 3%;
-}
-#footer div{
-	margin-left: 6%;
-	vertical-align: text-top;
-}
-#footer h3{
-	font-size: 16px;
-	font-weight: bold;
-}
-#footer ul{
-	padding-top: 7px;
-	list-style-type: none;
-	padding-left: 0;
-}
-#footer img{
-	width: 35px;
-}
-}
-/*Hover*/
-.square img{
-  -webkit-transition: all 1s ease;
-   -moz-transition: all 1s ease;
-   -o-transition: all 1s ease;
-   -ms-transition: all 1s ease;
-    transition: all 1s ease;
-}
- 
-.square img:hover {
-  border: 5px solid #000;
-  border-radius: 50%;
-}
-
 
 
 
@@ -122,7 +46,7 @@ nav{
     background-size: 100% 100%, auto;
 }
 nav ul {
-	font-size: 17px;
+	font-size: 15px;
     list-style-type: none;
     color:white;
     margin: 0;
@@ -130,7 +54,7 @@ nav ul {
 }
 nav li {
     display: inline;
-    margin: 1.5%;
+    margin: 1.1%;
 /*  border-radius: 40%;
     border: 2px solid white;*/
 }
@@ -139,6 +63,34 @@ nav li img{
 	margin: 1%;
 	margin-left: 6%;
 	margin-right: 6%;
+}
+
+/*Pricing*/
+
+#titlePricing h2{
+	text-align: center;
+	margin-top: 2%;
+	font-size: 35px;
+	font-weight: lighter;
+}
+#titlePricing p{
+	text-align: center;
+}
+#pricing{
+	margin: 2%;
+
+}
+#pricingForm{
+
+}
+#dogCheckbox{
+	display:inline-block;
+	vertical-align: top;
+	padding: 1%;
+}
+#catCheckbox{
+	display: inline-block;
+	padding: 1%;
 }
 
 
@@ -564,3 +516,80 @@ p{
 }
 }
 
+
+/*Mobile IPhone*/
+@media screen and (max-width: 599px){
+
+
+/*NavBar*/
+nav ul li{
+    -webkit-transition: color 1s;
+    -moz-transition:    color 1s;
+    -ms-transition:     color 1s;
+    -o-transition:      color 1s;
+    transition:         color 1s;
+}
+nav ul li:hover {
+    color: green;
+}
+nav{
+	font-family: 'Geneva', sans-serif;
+	background-image: url("Images/balconies_green.jpg");
+	text-align: center;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    display: inline;
+    padding: 1%;
+    font-size: 8px;
+}
+nav li img{
+	width: 13%;
+	margin: 1%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+/*Footer*/
+#footer{
+	background-color: #F0F8FF;
+	padding-top: 2%;
+	padding-bottom: 3%;
+}
+#footer div{
+	margin-left: 6%;
+	vertical-align: text-top;
+}
+#footer h3{
+	font-size: 16px;
+	font-weight: bold;
+}
+#footer ul{
+	padding-top: 7px;
+	list-style-type: none;
+	padding-left: 0;
+}
+#footer img{
+	width: 35px;
+}
+/*Hover*/
+.square img{
+  -webkit-transition: all 1s ease;
+   -moz-transition: all 1s ease;
+   -o-transition: all 1s ease;
+   -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+ 
+.square img:hover {
+  border: 5px solid #000;
+  border-radius: 50%;
+}
+}
+/*Hover*/
