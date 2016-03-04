@@ -1,8 +1,7 @@
 $(document).ready(function(){
-
-	$('#locationModal').click(function(){
-  	$('.ui.modal')
-  		.modal('show');
+  $('#locationModal').click(function(){
+    $('.ui.modal')
+      .modal('show');
   });
   $('.slider1').bxSlider({
     slideWidth: 300,
@@ -11,36 +10,224 @@ $(document).ready(function(){
     slideMargin: 10
   });
   $('.ui.checkbox').checkbox();
-  //change value of pet checkbox when checked
+  //Add up columns
+    var tds = document.getElementById('priceTable').getElementsByTagName('td');
+      var monthSum = 0;
+      for(var i = 0; i< tds.length -1; i++){
+         if(tds[i].className == 'countMonth'){
+         monthSum += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
+        }
+      }
+      document.getElementById('firstMonthTotal').innerHTML = monthSum
+
+      var tds = document.getElementById('priceTable').getElementsByTagName('td');
+      var monthSum = 0;
+      for(var i = 0; i< tds.length -1; i++){
+         if(tds[i].className == 'countRecurring'){
+         monthSum += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
+        }
+      }
+      document.getElementById('recurringTotal').innerHTML = monthSum
+
+  // Dog Data Table Calc
+    $("#dogCount").change(function(){
+    if (document.getElementById("dogCheckbox").value == "true"){
+      var dogCount= document.getElementById("dogCount").value;
+      var dogMonthlyFee= 25*(dogCount);
+      var dogDeposit= 200 + 50*((dogCount)-1);     
+      var dogFee= 200 + 50*((dogCount)-1);
+      $("#dogFeeChoice").html(dogCount + " Dog(s)");
+      $("#dogFeeDescription").html("Non-refundable Fee");
+      $("#dogFeeAmount").html(dogFee);
+      $("#dogFeeFirstMonth").html(dogFee);
+      
+      $("#dogDepositChoice").html(dogCount + " Dog(s)");
+      $("#dogDepositDescription").html("Refundable Deposit");
+      $("#dogDepositAmount").html(dogDeposit);
+      $("#dogDepositFirstMonth").html(dogDeposit);
+
+      $("#dogMonthlyChoice").html(dogCount + " Dog(s)");
+      $("#dogMonthlyDescription").html("Non-refundable Monthly");
+      $("#dogMonthlyAmount").html(dogMonthlyFee);
+      $("#dogMonthlyFirstMonth").html(dogMonthlyFee);
+      $("#dogMonthlyRecurring").html(dogMonthlyFee);
+    }else if(document.getElementById("dogCheckbox").value =="false"){
+
+    }
+      var tds = document.getElementById('priceTable').getElementsByTagName('td');
+      var monthSum = 0;
+      for(var i = 0; i< tds.length -1; i++){
+         if(tds[i].className == 'countMonth'){
+         monthSum += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
+        }
+      }
+      document.getElementById('firstMonthTotal').innerHTML = monthSum
+
+      var tds = document.getElementById('priceTable').getElementsByTagName('td');
+      var monthSum = 0;
+      for(var i = 0; i< tds.length -1; i++){
+         if(tds[i].className == 'countRecurring'){
+         monthSum += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
+        }
+      }
+      document.getElementById('recurringTotal').innerHTML = monthSum
+  });
+
+    // Cat Data Table Calc
+    $("#catCount").change(function(){
+    if (document.getElementById("catCheckbox").value == "true"){
+      var catCount= document.getElementById("catCount").value;
+      var catMonthlyFee= 15*(catCount);
+      var catDeposit= 200 + 50*((catCount)-1);     
+      var catFee= 200 + 50*((catCount)-1);
+      $("#catFeeChoice").html(catCount + " Cat(s)");
+      $("#catFeeDescription").html("Non-refundable Fee");
+      $("#catFeeAmount").html(catFee);
+      $("#catFeeFirstMonth").html(catFee);
+      
+      $("#catDepositChoice").html(catCount + " Cat(s)");
+      $("#catDepositDescription").html("Refundable Deposit");
+      $("#catDepositAmount").html(catDeposit);
+      $("#catDepositFirstMonth").html(catDeposit);
+
+      $("#catMonthlyChoice").html(catCount + " Cat(s)");
+      $("#catMonthlyDescription").html("Non-refundable Monthly");
+      $("#catMonthlyAmount").html(catMonthlyFee);
+      $("#catMonthlyFirstMonth").html(catMonthlyFee);
+      $("#catMonthlyRecurring").html(catMonthlyFee);
+    }else if(document.getElementById("catCheckbox").value =="false"){
+
+    }
+      var tds = document.getElementById('priceTable').getElementsByTagName('td');
+      var monthSum = 0;
+      for(var i = 0; i< tds.length -1; i++){
+         if(tds[i].className == 'countMonth'){
+         monthSum += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
+        }
+      }
+      document.getElementById('firstMonthTotal').innerHTML = monthSum
+
+      var tds = document.getElementById('priceTable').getElementsByTagName('td');
+      var monthSum = 0;
+      for(var i = 0; i< tds.length -1; i++){
+         if(tds[i].className == 'countRecurring'){
+         monthSum += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
+        }
+      }
+      document.getElementById('recurringTotal').innerHTML = monthSum
+  });
+
+
+	
+  //change value of pet checkboxs when checked
   $('#petCheckbox').change(function(){
      pcb = $(this);
      pcb.val(pcb.prop('checked'));
  });
   $('#dogCheckbox').change(function(){
-     pcb = $(this);
-     pcb.val(pcb.prop('checked'));
+     dcb = $(this);
+     dcb.val(dcb.prop('checked'));
  });
   $('#catCheckbox').change(function(){
-     pcb = $(this);
-     pcb.val(pcb.prop('checked'));
+     ccb = $(this);
+     ccb.val(ccb.prop('checked'));
  });
   //initially hide animal choices
-  $('#dogCheckbox').hide();
-  $('#catCheckbox').hide();
-  //
+  $('#dogCheckdiv').hide();
+  $('#catCheckdiv').hide();
+  //show anial chexkboxes if
   $('#petCheckbox').change(function(){
     if (document.getElementById("petCheckbox").value == "true"){
       console.log(true)
-        $('#dogCheckbox').show();
-        $('#catCheckbox').show();
+        $('#dogCheckdiv').show();
+        $('#catCheckdiv').show();
     }else if (document.getElementById("petCheckbox").value == "false"){
       console.log(false)
-      $('#dogCheckbox').hide();
-      $('#catCheckbox').hide();
+      $('#dogCheckdiv').hide();
+      $('#catCheckdiv').hide();
+    }
+  });
+  //initially hide dogdropdown choices
+  $('#dogDropdown').hide();
+  $('#catDropdown').hide();
+  //show dropdowns if
+  $('#dogCheckbox').change(function(){
+    if (document.getElementById("dogCheckbox").value == "true"){
+      console.log(true)
+        $('#dogDropdown').show();
+    }else if (document.getElementById("dogCheckbox").value == "false"){
+      console.log(false)
+      $('#dogDropdown').hide();
+    }
+
+
+
+  });
+  $('#catCheckbox').change(function(){
+    if (document.getElementById("catCheckbox").value == "true"){
+      console.log(true)
+        $('#catDropdown').show();
+    }else if (document.getElementById("catCheckbox").value == "false"){
+      console.log(false)
+      $('#catDropdown').hide();
     }
   });
 
+  var oneBedroom= 850;
+  var twoBedroom= 1000;
+  $("#apartmentValue").change(function(){
+    if (document.getElementById("apartmentValue").value == "one"){
+      $("#apartmentChoice").html("One Bedroom Apartment");
+      $("#apartmentDescription").html("750 Square Feet");
+      $("#apartmentAmount").html(oneBedroom);
+      $("#apartmentFirstMonth").html(oneBedroom);
+      $("#apartmentRecurring").html(oneBedroom);
+      $("#depositDescription").html("One Bedroom Apartment Deposit");
+      $("#depositAmount").html(oneBedroom);
+      $("#depositFirstMonth").html(oneBedroom);
+      $("#depositRecurring").html(oneBedroom);
+        var tds = document.getElementById('priceTable').getElementsByTagName('td');
+  var monthSum = 0;
+  for(var i = 0; i< tds.length -1; i++){
+    if(tds[i].className == 'countMonth'){
+      monthSum += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
+    }
+  }
+  document.getElementById('firstMonthTotal').innerHTML = monthSum
+    }else if(document.getElementById("apartmentValue").value =="two"){
+      $("#apartmentChoice").html("Two Bedroom Apartment");
+      $("#apartmentDescription").html("950 Square Feet");
+      $("#apartmentAmount").html(twoBedroom);
+      $("#apartmentFirstMonth").html(twoBedroom);
+      $("#apartmentRecurring").html(twoBedroom);
+      $("#depositDescription").html("Two Bedroom Apartment Deposit");
+      $("#depositAmount").html(twoBedroom);
+      $("#depositFirstMonth").html(twoBedroom);
+      $("#depositRecurring").html(twoBedroom);
+    }
+      var tds = document.getElementById('priceTable').getElementsByTagName('td');
+      var monthSum = 0;
+      for(var i = 0; i< tds.length -1; i++){
+         if(tds[i].className == 'countMonth'){
+         monthSum += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
+        }
+      }
+      document.getElementById('firstMonthTotal').innerHTML = monthSum
 
+      var tds = document.getElementById('priceTable').getElementsByTagName('td');
+      var monthSum = 0;
+      for(var i = 0; i< tds.length -1; i++){
+         if(tds[i].className == 'countRecurring'){
+         monthSum += isNaN(tds[i].innerHTML) ? 0 : parseInt(tds[i].innerHTML);
+        }
+      }
+      document.getElementById('recurringTotal').innerHTML = monthSum
+  });
+
+  
+
+
+  //idk why but it is duplicated but this is t get rid of double arrows on the carousal
   $(".bx-controls-direction")[1].hide();
 
 
@@ -48,14 +235,8 @@ $(document).ready(function(){
 
 
 // var applicationFee= 40
-// var oneBedroom= 850
-// var twoBedroom= 1000
-// var dogMonthlyFee= 25
-// var catMonthlyFee= 15
-// var dogDeposit= 200
-// var catDeposit= 200
-// var dogFee= 200
-// var catFee= 200
+
+
 // var oneBedroomSecurity = 850
 // var twoBedroomSecurity = 1000
 

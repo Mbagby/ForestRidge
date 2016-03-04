@@ -87,9 +87,9 @@
 
          <div class="field">
            <label>Apartment Size</label>
-           <select class="ui fluid dropdown">
-             <option value="">One Bedroom</option>
-             <option value="AL">Two Bedroom</option>
+           <select class="ui fluid dropdown" id="apartmentValue">
+             <option value="one">One Bedroom</option>
+             <option value="two">Two Bedroom</option>
            </select>
          </div>
 
@@ -100,46 +100,141 @@
 
         </br>
 
-        <div class= "ui checkbox" id="dogCheckbox">
-            <input type="checkbox" name="dogs" class="hidden" value= "false">
+        <div class= "ui checkbox" id="dogCheckdiv">
+            <input type="checkbox" id="dogCheckbox" name="dogs" class="hidden" value= "false">
             <label>Dog</label>
+        </div>
+
+        <div class = "six wide field" id="dogDropdown">
+            <label>How many dogs?</label>
+            <select class="ui fluid dropdown" id="dogCount">
+                 <option value="1">One</option>
+                 <option value="2">Two</option>
+                 <option value="3">Three</option>
+           </select>
         </div>
 
 </br>
 
-        <div class= "ui checkbox" id="catCheckbox">
-            <input type="checkbox" name="cats"class="hidden" value= "false">
+        <div class= "ui checkbox" id="catCheckdiv">
+            <input type="checkbox" id="catCheckbox" name="cats"class="hidden" value= "false">
             <label>Cat</label>
         </div>
-
-
-        <div class = "field" id="dogDropdown">
-            <label>How many dogs?</label>
-            <select class="ui fluid dropdown">
-                 <option value="1">One</option>
-                 <option value="2">Two</option>
-                 <option value="3">Three</option>
-           </select>
-        </div>
-
-         <div class = "field" id="catDropdown">
+        <div class = "six wide field" id="catDropdown">
             <label>How many cats?</label>
-            <select class="ui fluid dropdown">
+            <select class="ui fluid dropdown" id="catCount">
                  <option value="1">One</option>
                  <option value="2">Two</option>
                  <option value="3">Three</option>
            </select>
         </div>
+
+
+
+
+
+
+
+         
 
 
   </div>
 </div>
 
 
+    <div id="tableContainer">
+        <table class="ui striped celled five columned table" id="priceTable">
+          <thead>
+            <tr>
+              <th class="three wide">Item</th>
+              <th class="three wide">Description</th>
+              <th class="two wide">Amount</th>
+              <th class="two wide">First Month</th>
+              <th class="two wide">Monthly Recurring</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id ="applicationRow">
+              <td id = "applicationChoice">Application Fee</td>
+              <td id = "applicationDescription">Non-refundable Fee</td>
+              <td id = "applicationAmount">45</td>
+              <td class ="countMonth"id = "applicationFirstMonth">45</td>
+              <td class ="countRecurring"id = "applicationRecurring">0</td>
+            </tr>
+            <tr id ="FreeRow">
+              <td id = "freeChoice">Gas, Water, Heat, Trash Removal, Sewer</td>
+              <td id = "freeDescription">All listed utilities included for Free!</td>
+              <td id = "freeAmount">0</td>
+              <td class ="countMonth"id = "freeFirstMonth">0</td>
+              <td class ="countRecurring"id = "freeRecurring">0</td>
+            </tr>
+            <tr id ="apartmentRow">
+              <td id = "apartmentChoice">One Bedroom Apartment</td>
+              <td id = "apartmentDescription">750 Square Feet</td>
+              <td id = "apartmentAmount">850</td>
+              <td class ="countMonth"id = "apartmentFirstMonth">850</td>
+              <td class ="countRecurring"id = "apartmentRecurring">850</td>
+            </tr>
+            <tr id ="apartmentDepositRow">
+              <td id = "depositChoice">Apartment Deposit</td>
+              <td id = "depositDescription">One Apartment Deposit</td>
+              <td id = "depositAmount">850</td>
+              <td class ="countMonth"id = "depositFirstMonth">850</td>
+              <td class ="countRecurring"id = "depositRecurring">850</td>
+            </tr>
+            <tr id ="dogFeeRow">
+              <td id = "dogFeeChoice">Dog Fee</td>
+              <td id = "dogFeeDescription"></td>
+              <td id = "dogFeeAmount"></td>
+              <td class ="countMonth"id = "dogFeeFirstMonth">0</td>
+              <td class ="countRecurring"id = "dogFeeRecurring">0</td>
+            </tr>
+            <tr id ="dogDepositRow">
+              <td id = "dogDepositChoice">Dog Deposit</td>
+              <td id = "dogDepositDescription"></td>
+              <td id = "dogDepositAmount"></td>
+              <td class ="countMonth"id = "dogDepositFirstMonth">0</td>
+              <td class ="countRecurring"id = "dogDepositRecurring">0</td>
+            </tr>
+            <tr id ="dogMonthlyRow">
+              <td id = "dogMonthlyChoice">Dog Monthly Fee</td>
+              <td id = "dogMonthlyDescription"></td>
+              <td id = "dogMonthlyAmount"></td>
+              <td class ="countMonth"id = "dogMonthlyFirstMonth">0</td>
+              <td class ="countRecurring"id = "dogMonthlyRecurring">0</td>
+            </tr>
+            <tr id ="catFeeRow">
+              <td id = "catFeeChoice">Cat Fee</td>
+              <td id = "catFeeDescription"></td>
+              <td id = "catFeeAmount"></td>
+              <td class ="countMonth"id = "catFeeFirstMonth">0</td>
+              <td class ="countRecurring"id = "catFeeRecurring">0</td>
+            </tr>
+            <tr id ="catDepositRow">
+              <td id = "catDepositChoice">Cat Deposit</td>
+              <td id = "catDepositDescription"></td>
+              <td id = "catDepositAmount"></td>
+              <td class ="countMonth"id = "catDepositFirstMonth">0</td>
+              <td class ="countRecurring"id = "catDepositRecurring">0</td>
+            </tr>
+            <tr id ="catMonthlyRow">
+              <td id = "catMonthlyChoice">Cat Monthly Fee</td>
+              <td id = "catMonthlyDescription"></td>
+              <td id = "catMonthlyAmount"></td>
+              <td class ="countMonth"id = "catMonthlyFirstMonth">0</td>
+              <td class ="countRecurring"id = "catMonthlyRecurring">0</td>
+            </tr>
+            <tr id ="totals">
+              <td>Total</td>
+              <td></td>
+              <td></td>
+              <td id = "firstMonthTotal"></td>
+              <td id = "recurringTotal"></td>
+            </tr>
+          </tbody>
+        </table>
 
-
-
-
+        </div>
 
 
 <!-- Footer -->

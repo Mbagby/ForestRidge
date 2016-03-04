@@ -77,20 +77,31 @@ nav li img{
 	text-align: center;
 }
 #pricing{
-	margin: 2%;
-
+	margin: 3%;
 }
-#pricingForm{
-
-}
-#dogCheckbox{
-	display:inline-block;
-	vertical-align: top;
-	padding: 1%;
-}
-#catCheckbox{
+#dogCheckdiv{
 	display: inline-block;
-	padding: 1%;
+	margin-top: 23px;
+}
+#catCheckdiv{
+	display: inline-block;
+	margin-top: 23px
+
+}
+#dogDropdown{
+	display:inline-block;
+	float:right;
+}
+#catDropdown{
+	display:inline-block;
+	float:right;
+}
+#tableContainer{
+	margin: 3%;
+}
+#priceTable{
+	font-size: 10px;
+	width: 100%;
 }
 
 
@@ -323,6 +334,44 @@ nav li img{
 	margin-right: 6%;
 }
 
+/*Pricing*/
+
+#titlePricing h2{
+	text-align: center;
+	margin-top: 2%;
+	font-size: 35px;
+	font-weight: lighter;
+}
+#titlePricing p{
+	text-align: center;
+}
+#pricing{
+	margin: 3%;
+}
+#dogCheckdiv{
+	display: inline-block;
+	margin-top: 23px;
+}
+#catCheckdiv{
+	display: inline-block;
+	margin-top: 23px
+
+}
+#dogDropdown{
+	display:inline-block;
+	float:right;
+}
+#catDropdown{
+	display:inline-block;
+	float:right;
+}
+#tableContainer{
+	margin: 3%;
+}
+#priceTable{
+	font-size: 10px;
+	width: 100%;
+}
 
 #titleApartments{
 	text-align: center;
