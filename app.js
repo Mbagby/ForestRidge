@@ -155,9 +155,47 @@ $(document).ready(function(){
     if (document.getElementById("dogCheckbox").value == "true"){
       console.log(true)
         $('#dogDropdown').show();
+        var dogCount= document.getElementById("dogCount").value;
+      var dogMonthlyFee= 25*(dogCount);
+      var dogDeposit= 200 + 50*((dogCount)-1);     
+      var dogFee= 200 + 50*((dogCount)-1);
+      $("#dogFeeChoice").html(dogCount + " Dog(s)");
+      $("#dogFeeDescription").html("Non-refundable Fee");
+      $("#dogFeeAmount").html(dogFee);
+      $("#dogFeeFirstMonth").html(dogFee);
+      
+      $("#dogDepositChoice").html(dogCount + " Dog(s)");
+      $("#dogDepositDescription").html("Refundable Deposit");
+      $("#dogDepositAmount").html(dogDeposit);
+      $("#dogDepositFirstMonth").html(dogDeposit);
+
+      $("#dogMonthlyChoice").html(dogCount + " Dog(s)");
+      $("#dogMonthlyDescription").html("Non-refundable Monthly");
+      $("#dogMonthlyAmount").html(dogMonthlyFee);
+      $("#dogMonthlyFirstMonth").html(dogMonthlyFee);
+      $("#dogMonthlyRecurring").html(dogMonthlyFee);
     }else if (document.getElementById("dogCheckbox").value == "false"){
       console.log(false)
       $('#dogDropdown').hide();
+      var dogCount= document.getElementById("dogCount").value;
+      var dogMonthlyFee= 25*(dogCount);
+      var dogDeposit= 200 + 50*((dogCount)-1);     
+      var dogFee= 200 + 50*((dogCount)-1);
+      $("#dogFeeChoice").html("Dog Fee");
+      $("#dogFeeDescription").html("Non-refundable Fee");
+      $("#dogFeeAmount").html(0);
+      $("#dogFeeFirstMonth").html(0);
+      
+      $("#dogDepositChoice").html("Dog Deposit");
+      $("#dogDepositDescription").html("Refundable Deposit");
+      $("#dogDepositAmount").html(0);
+      $("#dogDepositFirstMonth").html(0);
+
+      $("#dogMonthlyChoice").html("Dog Monthly Fee");
+      $("#dogMonthlyDescription").html("Non-refundable Monthly");
+      $("#dogMonthlyAmount").html(0);
+      $("#dogMonthlyFirstMonth").html(0);
+      $("#dogMonthlyRecurring").html(0);
     }
 
 
@@ -167,9 +205,47 @@ $(document).ready(function(){
     if (document.getElementById("catCheckbox").value == "true"){
       console.log(true)
         $('#catDropdown').show();
+                var catCount= document.getElementById("catCount").value;
+      var catMonthlyFee= 25*(catCount);
+      var catDeposit= 200 + 50*((catCount)-1);     
+      var catFee= 200 + 50*((catCount)-1);
+      $("#catFeeChoice").html(catCount + " Cat(s)");
+      $("#catFeeDescription").html("Non-refundable Fee");
+      $("#catFeeAmount").html(catFee);
+      $("#catFeeFirstMonth").html(catFee);
+      
+      $("#catDepositChoice").html(catCount + " Cat(s)");
+      $("#catDepositDescription").html("Refundable Deposit");
+      $("#catDepositAmount").html(catDeposit);
+      $("#catDepositFirstMonth").html(catDeposit);
+
+      $("#catMonthlyChoice").html(catCount + " Cat(s)");
+      $("#catMonthlyDescription").html("Non-refundable Monthly");
+      $("#catMonthlyAmount").html(catMonthlyFee);
+      $("#catMonthlyFirstMonth").html(catMonthlyFee);
+      $("#catMonthlyRecurring").html(catMonthlyFee);
     }else if (document.getElementById("catCheckbox").value == "false"){
       console.log(false)
       $('#catDropdown').hide();
+            var catCount= document.getElementById("catCount").value;
+      var catMonthlyFee= 25*(catCount);
+      var catDeposit= 200 + 50*((catCount)-1);     
+      var catFee= 200 + 50*((catCount)-1);
+      $("#catFeeChoice").html("Cat Fee");
+      $("#catFeeDescription").html("Non-refundable Fee");
+      $("#catFeeAmount").html(0);
+      $("#catFeeFirstMonth").html(0);
+      
+      $("#catDepositChoice").html("Cat Deposit");
+      $("#catDepositDescription").html("Refundable Deposit");
+      $("#catDepositAmount").html(0);
+      $("#catDepositFirstMonth").html(0);
+
+      $("#catMonthlyChoice").html("Cat Monthly Fee");
+      $("#catMonthlyDescription").html("Non-refundable Monthly");
+      $("#catMonthlyAmount").html(0);
+      $("#catMonthlyFirstMonth").html(0);
+      $("#catMonthlyRecurring").html(0);
     }
   });
 
